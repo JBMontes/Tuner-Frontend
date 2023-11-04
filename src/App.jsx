@@ -4,18 +4,21 @@ import Navbar from './Components/NavBar'
 import './App.css'
 import './Components/AllSongs'
 import AllSongs from './Components/AllSongs';
-
+import Detail from './Components/Detail'
+import SongCard from './Components/SongCard';
 function App() {
 
 
   return (
     <>
-     <h1>Hi</h1>
+
       <Router>
 <Navbar />
-<AllSongs />
+
 <Routes>
-{/* <Route path="/" element={}/> */}
+<Route path="/songs" element={<AllSongs/>}/>
+<Route path="/songs/:index" element={<Detail/>}/>
+
 </Routes>
 
       </Router>
