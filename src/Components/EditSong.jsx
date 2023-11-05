@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-
+import '../Style/edit.css'
 
 const API = import.meta.env.VITE_API_URL;
 
@@ -56,8 +56,8 @@ function EditSong() {
 
   
   return (
-    <div className="Edit">
-        <form onSubmit={handleSubmit}>
+    <div className="edit">
+        <form onSubmit={handleSubmit} className='editForm'>
             <label htmlFor="name">Name:</label>
             <input
                 id="name"
@@ -108,11 +108,11 @@ function EditSong() {
             <br />
             <br />
             <button type="submit">Submit</button>
-        </form>
-        <br />
         <Link to={`/songs`}>
             <button>↩︎</button>
         </Link>
+        </form>
+        
     </div>
 );
 }

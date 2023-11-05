@@ -18,12 +18,12 @@
 
 .h1Link{
     color: purple;
-    /* font-size: large; */
+   font-family: monoton;
 
 }
 
 .headerButton{
-    color: WHite;
+    color: White;
     background-color: rgb(114, 28, 114);
 }
 

@@ -1,0 +1,17 @@
+.newForm{
+display: flex;
+flex-direction: column;
+/* justify-content: space-around; */
+gap:10px;
+border: 3px solid white;
+background-color: rgba(106, 57, 213, 0.778);
+width: 400px;
+border-radius: 45px;
+padding: 20px;
+
+}
+
+.new{
+
+ margin-top: 200px;
+}

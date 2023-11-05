@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
+import '../Style/new.css'
 const API = import.meta.env.VITE_API_URL;
 
 function NewSong() {
@@ -44,8 +44,8 @@ function NewSong() {
     };
 
     return (
-        <div className="New">
-            <form onSubmit={handleSubmit}>
+        <div className="new">
+            <form onSubmit={handleSubmit} className="newForm">
                 <label htmlFor="name">Name:</label>
                 <input
                     id="name"
@@ -96,12 +96,12 @@ function NewSong() {
                 <br />
                 <br />
                 <button type="submit">Submit</button>
-            </form>
-            <br />
             <Link to={`/songs`}>
                 <button>↩︎</button>
             </Link>
+            </form>
         </div>
+            
     );
 }
 
