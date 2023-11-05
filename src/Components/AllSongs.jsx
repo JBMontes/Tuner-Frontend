@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import SongCard from './SongCard'
+import '../Style/allSongs.css'
 
 export default function AllSongs() {
   const [songs,setSongs] = useState([])

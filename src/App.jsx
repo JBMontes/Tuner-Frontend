@@ -7,6 +7,7 @@ import AllSongs from './Components/AllSongs';
 import Detail from './Components/Detail'
 import NewSong from './Components/NewSong';
 import EditSong from './Components/EditSong';
+import Home from './Pages/Home';
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
 <Navbar />
 
 <Routes>
+<Route path="/" element={<Home/>}/>
 <Route path="/songs" element={<AllSongs/>}/>
 <Route path="/songs/:id" element={<Detail/>}/>
 <Route path="/songs/new" element={<NewSong/>}/>

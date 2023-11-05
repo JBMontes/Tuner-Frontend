@@ -1,0 +1,9 @@
+.songs{
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(201, 30, 30);
+    padding: 15px;
+   display: flex;
+   flex-wrap:wrap ;
+   gap:60px;
+   justify-content: space-around;
+}
