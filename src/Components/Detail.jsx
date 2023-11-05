@@ -8,14 +8,14 @@ export default function Detail() {
     const [song, setSong] = useState({ name: "", });
 
     let navigate = useNavigate();
-    let { index } = useParams();
+    let { id } = useParams();
 
     useEffect(() => {
-        fetch(`${API}/songs/${index}`)
+        fetch(`${API}/songs/${id}`)
             .then((response) => response.json())
             .then((responseJSON) => setSong(responseJSON))
             .catch(() => navigate("/not-found"));
-    }, [index, navigate]);
+    }, [id, navigate]);
 
     return (
         <div className="detail">
@@ -24,16 +24,12 @@ export default function Detail() {
             <br />
             <h2>{song.name}</h2>
             <br />
-
-            <h2>{song.title}</h2>
-
-            <br />
             <h2>{song.album}</h2>
             <br />
 
-            <h2>{song.time}</h2>
+            <h2>{song.year_release}</h2>
             <br />
-            <h2>{song.is_favorite}</h2>
+            <h2>Favorite: {song.is_favorite ? "⭐️" : ""}</h2>
 
         </div>
     )

@@ -5,7 +5,7 @@ import './App.css'
 import './Components/AllSongs'
 import AllSongs from './Components/AllSongs';
 import Detail from './Components/Detail'
-import SongCard from './Components/SongCard';
+import NewSong from './Components/NewSong';
 function App() {
 
 
@@ -17,7 +17,8 @@ function App() {
 
 <Routes>
 <Route path="/songs" element={<AllSongs/>}/>
-<Route path="/songs/:index" element={<Detail/>}/>
+<Route path="/songs/:id" element={<Detail/>}/>
+<Route path="/songs/new" element={<NewSong/>}/>
 
 </Routes>
 

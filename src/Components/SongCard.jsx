@@ -1,6 +1,6 @@
 import { Link} from "react-router-dom"
 export default function SongCard({ tune }) {
-// let { index } = useParams();
+
 
     return (
         <div className="songCard">
@@ -11,7 +11,7 @@ export default function SongCard({ tune }) {
             <br />
             <p>{tune.album}</p>
             <br />
-            <p>{tune.is_favorite}</p>
+            <p>Favorite: {tune.is_favorite ? "⭐️" : ""}</p>
 
         </div>
     )
