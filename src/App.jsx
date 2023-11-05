@@ -6,6 +6,7 @@ import './Components/AllSongs'
 import AllSongs from './Components/AllSongs';
 import Detail from './Components/Detail'
 import NewSong from './Components/NewSong';
+import EditSong from './Components/EditSong';
 function App() {
 
 
@@ -19,6 +20,8 @@ function App() {
 <Route path="/songs" element={<AllSongs/>}/>
 <Route path="/songs/:id" element={<Detail/>}/>
 <Route path="/songs/new" element={<NewSong/>}/>
+<Route path="/songs/:id/edit" element={<EditSong/>}/>
+
 
 </Routes>
 

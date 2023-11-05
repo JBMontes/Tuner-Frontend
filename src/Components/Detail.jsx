@@ -17,19 +17,33 @@ export default function Detail() {
             .catch(() => navigate("/not-found"));
     }, [id, navigate]);
 
+    const handleDelete = () => {
+        fetch(`${API}/songs/${id}`, { method: "DELETE" })
+            .then(() => {
+                navigate(`/songs`);
+            })
+            .catch((error) => console.error(error));
+    };
     return (
         <div className="detail">
+            <div className="detailCard">
+                <h2>Artist: {song.artist}</h2>
+                <br />
+                <h2>Name: {song.name}</h2>
+                <br />
+                <h2>Album: {song.album}</h2>
+                <br />
 
-            <h1>{song.artist}</h1>
-            <br />
-            <h2>{song.name}</h2>
-            <br />
-            <h2>{song.album}</h2>
-            <br />
-
-            <h2>{song.year_release}</h2>
-            <br />
-            <h2>Favorite: {song.is_favorite ? "⭐️" : ""}</h2>
+                <h2>Year Released: {song.year_release}</h2>
+                <br />
+                <h2>Favorite: {song.is_favorite ? "⭐️" : "❌"}</h2>
+            </div>
+            <div className="button">
+                <Link to={`/songs/${id}/edit`}>
+                    <button>Edit</button>
+                </Link>
+                <button onClick={handleDelete}>Delete</button>
+            </div>
 
         </div>
     )

@@ -11,7 +11,7 @@ export default function SongCard({ tune }) {
             <br />
             <p>{tune.album}</p>
             <br />
-            <p>Favorite: {tune.is_favorite ? "⭐️" : ""}</p>
+            <p>Favorite: {tune.is_favorite ? "⭐️" : "❌"}</p>
 
         </div>
     )
