@@ -1,0 +1,16 @@
+.detail{
+    border: 3px solid white;
+    padding: 50px;
+    width: 100%;
+    border-radius: 45px;
+    background-color: rgba(106, 57, 213, 0.778);
+    margin-top: 90px;
+}
+
+.detailButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10px;
+
+}

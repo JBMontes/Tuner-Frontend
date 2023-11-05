@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-
+import '../Style/detail.css'
 const API = import.meta.env.VITE_API_URL;
 
 export default function Detail() {
@@ -38,7 +38,7 @@ export default function Detail() {
                 <br />
                 <h2>Favorite: {song.is_favorite ? "⭐️" : "❌"}</h2>
             </div>
-            <div className="button">
+            <div className="detailButton">
                 <Link to={`/songs/${id}/edit`}>
                     <button>Edit</button>
                 </Link>

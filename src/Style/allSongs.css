@@ -1,9 +1,12 @@
 .songs{
     border: 3px solid rgb(255, 255, 255);
-    background-color: rgb(201, 30, 30);
+    border-radius: 45px;
+    background-color:rgba(106, 57, 213, 0.778);
     padding: 15px;
    display: flex;
    flex-wrap:wrap ;
    gap:60px;
    justify-content: space-around;
+
+    
 }
