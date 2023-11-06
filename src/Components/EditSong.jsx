@@ -108,7 +108,7 @@ function EditSong() {
             <br />
             <br />
             <button type="submit">Submit</button>
-        <Link to={`/songs`}>
+        <Link to={`/songs/${id}`}>
             <button>↩︎</button>
         </Link>
         </form>
