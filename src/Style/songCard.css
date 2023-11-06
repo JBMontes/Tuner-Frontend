@@ -4,6 +4,10 @@
     padding: 15px;
     border-radius: 45px;
     max-width: 120px;
+   display:flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 420px;
     
 }
 
@@ -12,5 +16,6 @@
 }
 
 .cardLink:hover{
-    color:rgb(218, 20, 218)
+    color:rgb(218, 20, 218);
+    font-size:larger ;
 }
