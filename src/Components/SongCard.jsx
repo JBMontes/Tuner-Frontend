@@ -1,11 +1,12 @@
 import { Link} from "react-router-dom"
+import '../Style/songCard.css'
 export default function SongCard({ tune }) {
 
 
     return (
         <div className="songCard">
 
-            <Link to={`/songs/${tune.id}`}><p>{tune.name}</p></Link>
+            <Link to={`/songs/${tune.id}`} className="cardLink"><p>{tune.name}</p></Link>
             <br />
             <p>{tune.artist}</p>
             <br />

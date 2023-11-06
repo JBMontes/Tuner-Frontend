@@ -17,7 +17,8 @@ export default function AllSongs() {
 
 
     
-        return(
+        return(<>
+              <h1 className='playlistH'>Playlist</h1>
             <div className="songs">
                 {songs.map((tune)=> {
 
@@ -25,7 +26,7 @@ export default function AllSongs() {
                     
                 })}
                 </div>
-          
+                </>
         )
 
 

@@ -6,7 +6,7 @@ export default function NavBar() {
     return (
         <div className="navBar">
         
-            <Link to="/songs" className='h1Link'><h1>Tuner 🎶</h1></Link>
+            <Link to="/" className='h1Link'><h1>Tuner 🎶</h1></Link>
 
            <br />
 

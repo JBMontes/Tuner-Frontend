@@ -42,7 +42,11 @@ export default function Detail() {
                 <Link to={`/songs/${id}/edit`}>
                     <button>Edit</button>
                 </Link>
+                <Link to={`/songs`}>
+                    <button>↩︎</button>
+                </Link>
                 <button onClick={handleDelete}>Delete</button>
+
             </div>
 
         </div>

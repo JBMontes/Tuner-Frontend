@@ -1,0 +1,16 @@
+.songCard{
+
+    border-right:1px solid white;
+    padding: 15px;
+    border-radius: 45px;
+    max-width: 120px;
+    
+}
+
+.cardLink{
+    color: white;
+}
+
+.cardLink:hover{
+    color:rgb(218, 20, 218)
+}

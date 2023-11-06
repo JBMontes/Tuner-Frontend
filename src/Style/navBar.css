@@ -25,8 +25,22 @@
 .headerButton{
     color: White;
     background-color: rgb(114, 28, 114);
+    animation-name: leftSlide;
+    animation-duration: 4s;
+
 }
 
 .headerButton:hover{
     background-color: rgb(234, 76, 234)
+}
+
+@keyframes leftSlide {
+    from{
+        position:relative;
+       left: 400px
+    }
+    to{
+        position:relative;
+        left:0px;
+    }
 }
