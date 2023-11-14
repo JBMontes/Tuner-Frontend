@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Components/NavBar'
 import './App.css'
-import './Components/AllSongs'
-import AllSongs from './Components/AllSongs';
+// import './Components/AllArtists'
+
+import AllArtists from './Components/AllArtists';
 import Detail from './Components/Detail'
-import NewSong from './Components/NewSong';
-import EditSong from './Components/EditSong';
+import NewArtist from './Components/NewArtist';
+import EditArtist from './Components/EditArtist';
 import Home from './Pages/Home';
 function App() {
 
@@ -19,10 +20,10 @@ function App() {
 
 <Routes>
 <Route path="/" element={<Home/>}/>
-<Route path="/songs" element={<AllSongs/>}/>
-<Route path="/songs/:id" element={<Detail/>}/>
-<Route path="/songs/new" element={<NewSong/>}/>
-<Route path="/songs/:id/edit" element={<EditSong/>}/>
+<Route path="/artists" element={<AllArtists/>}/>
+<Route path="/artists/:id" element={<Detail/>}/>
+<Route path="/artists/new" element={<NewArtist/>}/>
+<Route path="/artists/:id/edit" element={<EditArtist/>}/>
 
 
 </Routes>

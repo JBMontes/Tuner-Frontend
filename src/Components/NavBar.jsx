@@ -10,7 +10,7 @@ export default function NavBar() {
 
            <br />
 
-            <Link to="/songs/new" ><button className='headerButton'>New Song</button></Link>
+            <Link to="/artists/new" ><button className='headerButton'>New Song</button></Link>
             
         </div>
     )

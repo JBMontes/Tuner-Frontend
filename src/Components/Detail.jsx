@@ -5,44 +5,42 @@ const API = import.meta.env.VITE_API_URL;
 
 export default function Detail() {
 
-    const [song, setSong] = useState({ name: "", });
+    const [artists, setArtists] = useState({ name: "", });
 
     let navigate = useNavigate();
     let { id } = useParams();
 
     useEffect(() => {
-        fetch(`${API}/songs/${id}`)
+        fetch(`${API}/artists/${id}`)
             .then((response) => response.json())
-            .then((responseJSON) => setSong(responseJSON))
+            .then((responseJSON) => setArtists(responseJSON))
             .catch(() => navigate("/not-found"));
     }, [id, navigate]);
 
     const handleDelete = () => {
-        fetch(`${API}/songs/${id}`, { method: "DELETE" })
+        fetch(`${API}/artists/${id}`, { method: "DELETE" })
             .then(() => {
-                navigate(`/songs`);
+                navigate(`/artists`);
             })
             .catch((error) => console.error(error));
     };
     return (
         <div className="detail">
+            
             <div className="detailCard">
-                <h2>Artist: {song.artist}</h2>
+            
+                <h2>Name: {artists.name}</h2>
                 <br />
-                <h2>Name: {song.name}</h2>
+                <h2>Category: {artists.category}</h2>
                 <br />
-                <h2>Album: {song.album}</h2>
-                <br />
-
-                <h2>Year Released: {song.year_release}</h2>
-                <br />
-                <h2>Favorite: {song.is_favorite ? "⭐️" : "❌"}</h2>
+                <h2>Home Town: {artists.hometown}</h2>
             </div>
             <div className="detailButton">
-                <Link to={`/songs/${id}/edit`}>
+
+                <Link to={`/artists/${id}/edit`}>
                     <button>Edit</button>
                 </Link>
-                <Link to={`/songs`}>
+                <Link to={`/artists`}>
                     <button>↩︎</button>
                 </Link>
                 <button onClick={handleDelete}>Delete</button>

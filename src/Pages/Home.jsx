@@ -6,7 +6,7 @@ export default function Home(){
        <h1 className='welcome'>Welcome To Tuner 🎶</h1> 
     
         <div className='homeButton'>
-            <Link to='/songs'> <button className='hButton'>View Playlist</button></Link>
+            <Link to='/artists'> <button className='hButton'>View Playlist</button></Link>
         </div>
     </div>)
 }
