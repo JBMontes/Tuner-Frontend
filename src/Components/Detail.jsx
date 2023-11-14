@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import '../Style/detail.css'
+import Songs from "./Songs";
 const API = import.meta.env.VITE_API_URL;
 
-export default function Detail() {
+function Detail() {
 
-    const [artists, setArtists] = useState({ name: "", });
+    const [artists, setArtists] = useState([]);
 
     let navigate = useNavigate();
     let { id } = useParams();
@@ -14,8 +15,8 @@ export default function Detail() {
         fetch(`${API}/artists/${id}`)
             .then((response) => response.json())
             .then((responseJSON) => setArtists(responseJSON))
-            .catch(() => navigate("/not-found"));
-    }, [id, navigate]);
+            .catch((error) => console.log(error));
+    }, [id, API]);
 
     const handleDelete = () => {
         fetch(`${API}/artists/${id}`, { method: "DELETE" })
@@ -26,9 +27,9 @@ export default function Detail() {
     };
     return (
         <div className="detail">
-            
+
             <div className="detailCard">
-            
+
                 <h2>Name: {artists.name}</h2>
                 <br />
                 <h2>Category: {artists.category}</h2>
@@ -46,7 +47,9 @@ export default function Detail() {
                 <button onClick={handleDelete}>Delete</button>
 
             </div>
-
+            <Songs />
         </div>
     )
 }
+
+export default Detail

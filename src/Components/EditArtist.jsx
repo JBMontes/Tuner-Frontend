@@ -31,7 +31,7 @@ function EditArtist() {
       method: "PUT",
       body: JSON.stringify(ArtistData),
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type":"application/json",
       },
     })
       .then(() => {
