@@ -26,6 +26,7 @@ function Detail() {
             .catch((error) => console.error(error));
     };
     return (
+        
         <div className="detail">
 
             <div className="detailCard">
@@ -49,6 +50,7 @@ function Detail() {
             </div>
             <Songs />
         </div>
+     
     )
 }
 

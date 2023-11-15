@@ -15,7 +15,6 @@ function EditArtist() {
   
 });
 
-
 // Grabs Previous Value
 
   useEffect(() => {
@@ -44,9 +43,6 @@ function EditArtist() {
     setArtists({ ...artists, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setArtists({ ...artists, is_favorite: !song.is_favorite });
-};
 
   const handleSubmit = (event) => {
     event.preventDefault();

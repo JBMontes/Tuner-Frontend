@@ -55,7 +55,7 @@ function NewArtist() {
                     required
                 />
 
-                <label htmlFor="category">Artist:</label>
+                <label htmlFor="category">Category:</label>
                 <input
                     id="category"
                     value={artists.category}

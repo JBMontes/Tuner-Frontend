@@ -1,0 +1,15 @@
+.songInfo {
+  border: 3px solid black;
+  border-radius: 45px;
+  color: white;
+width: 100%;
+max-width: 400px;
+}
+
+/* .songForm{
+    display:flex;
+    
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} */
